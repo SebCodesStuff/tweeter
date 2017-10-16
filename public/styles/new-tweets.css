@@ -1,0 +1,29 @@
+#compose-tweet {
+  background-color: #eee;
+  margin: 0.5em;
+  border-radius: 12px;
+  padding: 1em 1em 1em 1em;
+}
+
+#compose-tweet>h2 {
+  border-bottom: 2px solid black;
+}
+
+.container.center {
+  padding: 2em;
+}
+
+.center {
+   margin: auto;
+ }
+
+.counter {
+  float: right;
+  margin-top: 3px;
+}
+
+
+textarea {
+  z-index: 0;
+  width: 100%;
+}
