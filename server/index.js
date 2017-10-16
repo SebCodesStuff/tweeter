@@ -27,6 +27,8 @@ const DataHelpers = require("./lib/data-helpers.js")(db);
 const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
 // Mount the tweets routes at the "/tweets" path prefix:
+//This is the middleware it executes /tweets/ before we resolve any routing which is how
+//we can use the modular routing
 app.use("/tweets", tweetsRoutes);
 
 app.listen(PORT, () => {

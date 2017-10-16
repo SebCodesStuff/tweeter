@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+  font-family:'Roboto Condensed', sans-serif;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -15,7 +16,7 @@ html {
  */
 
 body {
-  margin: 0;
+  margin-top: 120px;
   color: #244751;
   background-color: #eee;
 }
@@ -23,3 +24,37 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+#compose-tweet {
+  background-color: #eee;
+  margin: 0.5em;
+  padding: 1em 1em 1em 1em;
+}
+
+#compose-tweet>h2 {
+  border-bottom: 2px solid black;
+}
+
+.container.center {
+  padding: 2em;
+}
+
+.center {
+   margin: auto;
+ }
+
+.counter {
+  float: right;
+  margin-top: 3px;
+}
+
+main {
+  width:450px;
+  height:450px;
+  background-color: white;
+}
+
+textarea {
+  z-index: 0;
+  width: 100%;
+}
