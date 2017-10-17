@@ -6,14 +6,14 @@
 
 $( document ).ready(function() {
   $('textarea[placeholder*="What are you humming about?"]').on('keyup', function() {
-    var charLen = $(this).val().length;
-    $('.counter').text(140-charLen);
+    var $charLen = $(this).val().length;
+    $('.counter').text(140-$charLen);
 
     //Changes the color if invalid
-    if (charLen >= 140) {
-      $('.counter').css('color','red')
+    if ($charLen >= 140) {
+      $(this).siblings().addClass('red')
     } else {
-      $('.counter').css('color','black')
+      $(this).siblings().removeClass('red')
     }
   });
 });
