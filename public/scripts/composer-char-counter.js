@@ -5,7 +5,7 @@
 //longer than the limit
 
 $( document ).ready(function() {
-  $('textarea').on('keyup', function() {
+  $('textarea[placeholder*="What are you humming about?"]').on('keyup', function() {
     var charLen = $(this).val().length;
     $('.counter').text(140-charLen);
 
