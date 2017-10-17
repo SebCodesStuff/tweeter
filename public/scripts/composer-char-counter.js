@@ -8,5 +8,10 @@ $( document ).ready(function() {
   $('textarea').on('keyup', function() {
     var counter = $(this).val().length;
     $('.counter').text(140-counter);
+    if (counter >= 140) {
+      $('.counter').css('color','red')
+    } else {
+      $('.counter').css('color','black') 
+    }
   });
 });
