@@ -1,29 +1,58 @@
 #compose-tweet {
   background-color: #eee;
   margin: 0.5em;
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 1em 1em 1em 1em;
 }
 
 #compose-tweet>h2 {
   border-bottom: 2px solid black;
+  margin-top: 0;
 }
 
 .container.center {
   padding: 2em;
 }
 
-.center {
-   margin: auto;
- }
-
 .counter {
   float: right;
   margin-top: 3px;
+}
+
+header {
+  border-bottom:1px solid #E1E1E1;
+  height: 40px;
+  line-height: 40px;
+}
+
+footer {
+  border-top:1px solid #E1E1E1;
+  background-color: white;
+  height: 40px;
+  line-height: 40px;
 }
 
 
 textarea {
   z-index: 0;
   width: 100%;
+}
+
+.displayed-tweet {
+  margin: 0.5em;
+  margin-top: 1em;
+  border-radius: 12px;
+  border: 1px solid #E1E1E1;
+  background-color: #eee;
+  z-index: 1;
+}
+
+article {
+  height: 100px;
+  background-color: white;
+}
+
+.hover-border {
+  border: 1px solid #7F7E7E;
+  float:right;
 }

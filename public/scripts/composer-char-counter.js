@@ -11,9 +11,9 @@ $( document ).ready(function() {
 
     //Changes the color if invalid
     if ($charLen >= 140) {
-      $(this).siblings().addClass('red')
+      $(this).siblings('span').addClass('red')
     } else {
-      $(this).siblings().removeClass('red')
+      $(this).siblings('span').removeClass('red')
     }
   });
 });
