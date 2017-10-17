@@ -5,6 +5,7 @@
  */
 $( document ).ready(function() {
  $(".displayed-tweet").hover(function(){
-     $(this).addClass('hover-border');
+     $(this).toggleClass('hover-border');
+     $(this).find('i').toggle()
  });
 });

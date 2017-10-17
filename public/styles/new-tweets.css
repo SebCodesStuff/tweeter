@@ -56,3 +56,13 @@ article {
   border: 1px solid #7F7E7E;
   float:right;
 }
+
+.active-user {
+  display: inline;
+}
+
+.fa.fa {
+  float: right;
+  padding: 0.6em;
+  display: none;
+}
