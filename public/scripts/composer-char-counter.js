@@ -6,12 +6,14 @@
 
 $( document ).ready(function() {
   $('textarea').on('keyup', function() {
-    var counter = $(this).val().length;
-    $('.counter').text(140-counter);
-    if (counter >= 140) {
+    var charLen = $(this).val().length;
+    $('.counter').text(140-charLen);
+
+    //Changes the color if invalid
+    if (charLen >= 140) {
       $('.counter').css('color','red')
     } else {
-      $('.counter').css('color','black') 
+      $('.counter').css('color','black')
     }
   });
 });
