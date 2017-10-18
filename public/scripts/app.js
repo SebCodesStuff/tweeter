@@ -11,15 +11,23 @@
    $('form').submit(function(ev){
      ev.preventDefault();
      var data = $(this).serialize();
-     console.log(data);
-     $.ajax({
-       url: '/tweets',
-       method: 'POST',
-       data: data,
-       success: function (data) {
-         loadTweets();
-       }
-     })
+      if (data === "text=") {
+        alert("You're tweet is empty please add some content before you submit")
+      }
+
+      else if (data.length > 145) {
+        alert("You're tweet is longer than the character limit")
+      } else {
+       $.ajax({
+         url: '/tweets',
+         method: 'POST',
+         data: data,
+         success: function (data) {
+           loadTweets();
+           $("form").trigger('reset');
+         }
+       })
+     }
    })
 
    function loadTweets() {
@@ -65,7 +73,7 @@ function createTweetElement(tweet) {
 function renderTweets(tweet) {
   for(var i = 0; i < tweet.length; i++) {
     var createdTweet = createTweetElement(tweet[i])
-    $('#tweets-container').append(createdTweet);
+    $('#tweets-container').prepend(createdTweet);
   }
 };
 

@@ -10,7 +10,7 @@ $( document ).ready(function() {
     $('.counter').text(140-$charLen);
 
     //Changes the color if invalid
-    if ($charLen >= 140) {
+    if ($charLen > 140) {
       $(this).siblings('span').addClass('red')
     } else {
       $(this).siblings('span').removeClass('red')
