@@ -4,35 +4,38 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$( document ).ready(function() {
- $(".displayed-tweet").hover(function(){
-     $(this).find('i').toggle()
- });
-});
+// $( document ).ready(function() {
+//  $(".displayed-tweet").hover(function(){
+//      $(this).find('i').toggle()
+//  });
+// });
 
 
 function createTweetElement(tweet) {
+  var date =new Date(tweet.created_at);
   var $tweet = `
-        <header class="container">
-          <img class="tweet-img" src=${tweet.user.avatars.small} alt="User Avatar">
-          <h2>${tweet.user.name}</h2>
-          <p class="right">${tweet.user.handle}</p>
-        </header>
-          <article class="tweet-body">
-              ${tweet.content.text}
-          </article>
-        <footer>${tweet.created_at}
-          <i class="fa fa-flag" aria-hidden="true"></i>
-          <i class="fa fa-retweet" aria-hidden="true"></i>
-          <i class="fa fa-heart" aria-hidden="true"></i>
-        </footer>`
+      <article class="container displayed-tweet">
+          <header class="container">
+            <img class="tweet-img" src=${tweet.user.avatars.small} alt="User Avatar">
+            <h2>${tweet.user.name}</h2>
+            <p class="right">${tweet.user.handle}</p>
+          </header>
+            <div class="tweet-body">
+                ${tweet.content.text}
+            </div>
+          <footer>${date}
+            <i class="fa fa-flag" aria-hidden="true"></i>
+            <i class="fa fa-retweet" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </footer>
+        </article>`
   return $tweet;
 }
 
 function renderTweets(tweet) {
   for(var i = 0; i < tweet.length; i++) {
     var createdTweet = createTweetElement(tweet[i])
-    $('.new-tweet').append(createdTweet);
+    $('#tweets-container').append(createdTweet);
   }
 };
 

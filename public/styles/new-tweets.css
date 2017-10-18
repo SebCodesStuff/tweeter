@@ -81,6 +81,10 @@ form > textarea {
   opacity: 1;
 }
 
+.container.displayed-tweet:hover .fa {
+  opacity: 1;
+}
+
 .hover-border {
   border: 1px solid #7F7E7E;
   opacity: 1;
@@ -93,7 +97,7 @@ form > textarea {
 .fa.fa {
   float: right;
   padding: 0.6em;
-  display: none;
+  opacity: 0;
 }
 
 .tweet-img {
