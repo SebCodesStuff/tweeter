@@ -1,16 +1,16 @@
 #compose-tweet {
-  background-color: #eee;
+  background-color: #EEE;
   margin: 0.5em;
-  border-radius: 6px;
-  padding: 1em 1em 1em 1em;
+  border-radius: 0.7em;
+  padding: 1em;
 }
 
-#compose-tweet>h2 {
+#compose-tweet > h2 {
   border-bottom: 2px solid black;
   margin-top: 0;
 }
 
-.container.center {
+.main-container.center {
   padding: 2em;
 }
 
@@ -19,10 +19,17 @@
   margin-top: 3px;
 }
 
+.right {
+  float: right;
+  margin-top: 3px;
+}
+
+
+
 header {
   border-bottom:1px solid #E1E1E1;
-  height: 40px;
-  line-height: 40px;
+  height: 60px;
+  line-height: 60px;
 }
 
 footer {
@@ -30,12 +37,27 @@ footer {
   background-color: white;
   height: 40px;
   line-height: 40px;
+  border-bottom-right-radius: 0.7em;
+  border-bottom-left-radius: 0.7em;
+  padding-left: 0.5em;
 }
 
 
-textarea {
+form > textarea {
   z-index: 0;
   width: 100%;
+  margin-top:1em;
+}
+
+
+
+.container > h2 {
+  margin-left: 0.5em;
+  vertical-align: top;
+}
+
+.container > p {
+  margin-right: 0.5em
 }
 
 .displayed-tweet {
@@ -45,16 +67,23 @@ textarea {
   border: 1px solid #E1E1E1;
   background-color: #eee;
   z-index: 1;
+  opacity: 0.7;
 }
 
-article {
+.tweet-body {
   height: 100px;
   background-color: white;
+  padding: 0.5em;
+}
+
+.container.displayed-tweet:hover {
+  border: 1px solid #7F7E7E;
+  opacity: 1;
 }
 
 .hover-border {
   border: 1px solid #7F7E7E;
-  float:right;
+  opacity: 1;
 }
 
 .active-user {
@@ -65,4 +94,11 @@ article {
   float: right;
   padding: 0.6em;
   display: none;
+}
+
+.tweet-img {
+  height: 2.5em;
+  margin: 0.7em;
+  display: inline;
+  vertical-align: top;
 }
