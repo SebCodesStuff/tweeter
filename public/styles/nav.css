@@ -24,29 +24,6 @@
   float: left;
 }
 
-/*#compose-button li {
-  list-style: none;
-  text-align: center;
-  background-color: white;
-  margin-right: 30px;
-  line-height: 60px;
-  height: 1.8em;
-  width: 6.5em;
-  margin: 0.3em;
-  float: right;
-  font-size: 30px;
-  padding-top: 6px;
-  border-radius: 0.3em;
-  opacity: .95;
-  color:#33988E
-}*/
-/*
-#buttons li a {
-  text-decoration: none;
-  color: #FFFFFF;
-  display: block;
-}*/
-
 #button-container {
   height: 80px;
   line-height: 80px;

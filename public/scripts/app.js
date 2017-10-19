@@ -12,8 +12,7 @@
       if (data === "text=") {
         alert("You're tweet is empty please add some content before you submit")
       }
-
-      else if (data.length > 145) {
+      else if (data.length >= 151) {
         alert("You're tweet is longer than the character limit")
       } else {
        $.ajax({
@@ -26,7 +25,7 @@
          }
        })
      }
-   })
+   });
 
    function loadTweets() {
      $.ajax({
@@ -39,14 +38,15 @@
    };
    loadTweets();
 
-   $(".compose-button").click(function(){
-     debugger
-     $(this).toggleClass("toggleButton")
-     $("#compose-tweet").slideToggle();
-     $("#compose-tweet").focus();
-});
+// My compose button toggle
 
+  $(".compose-button").click(function(){
+   $(this).toggleClass("toggleButton")
+   $("#compose-tweet").slideToggle();
+   $("textarea").focus();
   });
+
+});
 
 
 function escape(str) {
@@ -67,7 +67,7 @@ function createTweetElement(tweet) {
             <div class="tweet-body">
                 ${safeHTML}
             </div>
-          <footer>${parseHumanDate(tweet.created_at)} ago
+          <footer class="myFooter">${parseHumanDate(tweet.created_at)} ago
             <i class="fa fa-flag" aria-hidden="true"></i>
             <i class="fa fa-retweet" aria-hidden="true"></i>
             <i class="fa fa-heart" aria-hidden="true"></i>
