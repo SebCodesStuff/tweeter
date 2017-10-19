@@ -76,10 +76,6 @@ div > button {
   border: 1px solid black;
 }
 
-.test {
-display: none;
-}
-
 #compose-icon {
   opacity: 1;
   /*float: left;*/
