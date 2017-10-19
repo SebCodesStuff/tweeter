@@ -11,8 +11,8 @@ const loadDb        = require('./lib/mongo_db');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-loadDb(function loadServer(db) {
-
+loadDb(function (db) {
+  console.log("server loaded");
   // The in-memory database of tweets. It's a basic object with an array in it.
 
   // The `data-helpers` module provides an interface to the database of tweets.

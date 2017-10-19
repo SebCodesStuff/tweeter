@@ -6,15 +6,10 @@ const express       = require('express');
 const tweetsRoutes  = express.Router();
 
 module.exports = function(DataHelpers) {
+  console.log("tweet route loaded");
 
   tweetsRoutes.get("/", function(req, res) {
-    DataHelpers.getTweets((err, tweets) => {
-      if (err) {
-        res.status(500).json({ error: err.message });
-      } else {
-        res.json(tweets);
-      }
-    });
+    DataHelpers.getTweets().then(tweets => res.json(tweets))
   });
 
   tweetsRoutes.post("/", function(req, res) {
@@ -32,13 +27,14 @@ module.exports = function(DataHelpers) {
       created_at: Date.now()
     };
 
-    DataHelpers.saveTweet(tweet, (err) => {
-      if (err) {
-        res.status(500).json({ error: err.message });
-      } else {
-        res.status(201).send();
-      }
-    });
+    DataHelpers.saveTweet(tweet).then(tweets => res.status(201).send());
+    // {
+    //   if (err) {
+    //     res.status(500).json({ error: err.message });
+    //   } else {
+    //     res.status(201).send();
+    //   }
+    // });
   });
 
   return tweetsRoutes;
