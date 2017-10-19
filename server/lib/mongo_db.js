@@ -14,7 +14,7 @@ module.exports = function loadDb(callback) {
     // ==> We have a connection to the "test-tweets" db,
     //     starting here.
     console.log(`Connected to mongodb: ${MONGODB_URI}`);
-    console.log("db loaded");
+    console.log("Mongo db loaded");
 
     callback(db);
   });
