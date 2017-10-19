@@ -42,7 +42,7 @@
    $(".compose-button").click(function(){
      debugger
      $(this).toggleClass("toggleButton")
-    //  $("#compose-tweet").slideToggle();
+     $("#compose-tweet").slideToggle();
      $("#compose-tweet").focus();
 });
 
