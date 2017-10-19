@@ -75,6 +75,12 @@ form > textarea {
   padding: 0.5em;
 }
 
+.container.displayed-tweet .fa {
+  float: right;
+  padding: 0.6em;
+  opacity: 0;
+}
+
 .container.displayed-tweet:hover {
   border: 1px solid #7F7E7E;
   opacity: 1;
@@ -91,12 +97,6 @@ form > textarea {
 
 .active-user {
   display: inline;
-}
-
-.fa.fa {
-  float: right;
-  padding: 0.6em;
-  opacity: 0;
 }
 
 .tweet-img {

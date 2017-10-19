@@ -6,8 +6,6 @@
 
  $( document ).ready(() => {
 
-   $('main').css("height","100%")
-
    $('form').submit(function(ev){
      ev.preventDefault();
      var data = $(this).serialize();
@@ -40,6 +38,13 @@
      })
    };
    loadTweets();
+
+   $(".compose-button").click(function(){
+     debugger
+     $(this).toggleClass("toggleButton")
+     $("#compose-tweet").slideToggle();
+});
+
   });
 
 

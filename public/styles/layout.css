@@ -24,7 +24,7 @@ body {
 
 main {
   width:600px;
-  height:450px;
+  height: calc(100vh - 80px);
   background-color: white;
 }
 /*
