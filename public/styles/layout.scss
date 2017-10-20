@@ -3,6 +3,8 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+
 html {
   box-sizing: border-box;
   font-family:'Roboto Condensed', sans-serif;
@@ -27,9 +29,9 @@ main {
   height: calc(100%);
   background-color: white;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+
+/*Miscellaneous Classes common styles I've defined here to keep the code dry*/
 
 .red {
   color: red;
@@ -39,6 +41,7 @@ main {
    margin: auto;
  }
 
- h2 {
-   display: inline;
+ .right {
+   float: right;
+   margin-top: 3px;
  }
