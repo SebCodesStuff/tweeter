@@ -1,0 +1,31 @@
+nav img {
+  height: 80px;
+  width: 80px;
+  float: left; }
+
+nav span {
+  padding-left: 10px;
+  line-height: 80px;
+  float: left; }
+
+nav div {
+  height: 80px;
+  line-height: 80px;
+  float: right;
+  opacity: .95;
+  color: #33988E; }
+
+  nav div button {
+    font-size: 30px;
+    border-radius: 0.2em;
+    /*opacity: .95;
+        color: #33988E;*/
+    height: 1.9em;
+    line-height: 1.8em;
+    padding: 0 5px;
+    box-sizing: content-box; }
+  nav div i {
+    opacity: 1;
+    /*float: left;*/
+    font-size: 19px;
+    margin-top: 0em; }

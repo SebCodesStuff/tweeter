@@ -1,0 +1,22 @@
+.main-container.center {
+  padding: 2em; }
+
+#compose-tweet {
+  background-color: #EEE;
+  margin: 0.5em;
+  border-radius: 0.7em;
+  padding: 1em; }
+
+#compose-tweet > h2 {
+  border-bottom: 2px solid black;
+  margin-top: 0;
+  display: inline; }
+
+.tweet-input-box {
+  z-index: 0;
+  width: 100%;
+  margin-top: 1em; }
+
+.counter {
+  float: right;
+  margin-top: 3px; }

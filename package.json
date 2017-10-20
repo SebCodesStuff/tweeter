@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
-    "local": "./node_modules/.bin/nodemon --watch server -e js server/index.js"
+    "local": "./node_modules/.bin/nodemon --watch server -e js server/index.js",
+    "compile-sass": "./node_modules/node-sass/bin/node-sass --recursive --output public/css public/styles"
   },
   "author": "Lighthouse Labs",
   "license": "ISC",
@@ -20,5 +21,8 @@
   },
   "devDependencies": {
     "nodemon": "^1.9.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SebCodesStuff/tweeter"
 }

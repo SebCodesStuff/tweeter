@@ -1,0 +1,5 @@
+{
+	"undefined": "localhost/server/data-files/initial-tweets",
+	"dev": "localhost/DEV_DB_NAME",
+	"prod": "localhost/PROD_DB_NAME"
+}
