@@ -1,7 +1,9 @@
 "use strict";
 
 const MongoClient = require("mongodb").MongoClient;
-const MONGODB_URI = "mongodb://localhost:27017/test";
+const MONGODB_URI = "mongodb://Seb:mypassword@ds125555.mlab.com:25555/tweeter123";
+
+// mongodb://localhost:27017/test
 
 module.exports = function loadDb(callback) {
 
