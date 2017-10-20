@@ -21,8 +21,5 @@
   },
   "devDependencies": {
     "nodemon": "^1.9.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/SebCodesStuff/tweeter"
+  }
 }
