@@ -9,7 +9,13 @@
    $('form').submit(function(ev){
      ev.preventDefault();
      var data = $(this).serialize();
-      if (data === "text=") {
+
+    //  Could consider making this in a conditional. Doing this would check to see if
+    //  there's linebreaks and would then deny an empty tweet. But would only evaluate
+    // if this condition happens that way data could still include line breaks if it's not empty
+     var dataNoLineBreaks = data.replace(/[%0D%0A]/g,"")
+
+      if (dataNoLineBreaks === "text=") {
         alert("You're tweet is empty please add some content before you submit")
       }
       else if (data.length >= 151) {
