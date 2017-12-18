@@ -1,9 +1,11 @@
 "use strict";
 
+require('dotenv').config();
+
 // Will attempt to deploy this soon
 
 const MongoClient = require("mongodb").MongoClient;
-const MONGODB_URI = "mongodb://localhost:27017/test";
+const MONGODB_URI = process.env.MONGODB_URI;
 
 // mongodb://Seb:mypassword@ds125555.mlab.com:25555/tweeter123
 
