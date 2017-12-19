@@ -26,8 +26,9 @@
          method: 'POST',
          data: data,
          success: function (data) {
-           loadTweets();
            $("form").trigger('reset');
+   // Reloads the page, parameter ensures you reload from server instead of cache  
+           location.reload(true);
          }
        })
      }
