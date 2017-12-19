@@ -4,7 +4,7 @@
 
 // I need to make a request to the html page, I think that's the problem
 
-const PORT          = 8080;
+const PORT          = process.env.PORT || 8080;
 
 const express       = require("express");
 const bodyParser    = require("body-parser");
